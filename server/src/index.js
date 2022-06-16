@@ -90,7 +90,6 @@ app.post("/tweets", (req, res) => {
 
 app.get("/tweets", (_req, res) => {
   const lastTenTweets = tweets.slice(tweets.length - 10, tweets.length);
-
   res.send(lastTenTweets.reverse());
 });
 
