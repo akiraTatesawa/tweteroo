@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "tweteroo back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akiraTatesawa/tweteroo.git"
+  },
+  "keywords": [
+    "tweteroo",
+    "node",
+    "express"
+  ],
+  "author": "Arthur Akira Tatesawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akiraTatesawa/tweteroo/issues"
+  },
+  "homepage": "https://github.com/akiraTatesawa/tweteroo#readme",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.7.0"
+  }
+}
