@@ -1,5 +1,6 @@
 import express from "express";
 import chalk from "chalk";
+
 import { usersData, tweets } from "./database.js";
 
 export const routes = express.Router();
@@ -51,5 +52,8 @@ routes.get("/tweets", (_req, res) => {
 
 routes.get("/tweets/:username", (req, res) => {
   const { username } = req.params;
-  res.send(username);
+
+  const userTweets = tweets.filter(({ username: user }) => username === user);
+
+  res.send(userTweets);
 });
