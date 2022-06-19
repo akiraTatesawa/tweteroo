@@ -10,24 +10,46 @@ let userData = {
 };
 
 routes.post("/sign-up", (req, res) => {
+  const { username, avatar } = req.body;
+
+  if (!username || !avatar) {
+    console.log(chalk.red.bold("Please fill all the blanks\n"));
+    return res.status(400).send("Todos os campos são obrigatórios");
+  }
+
   userData = req.body;
   usersData.push(userData);
+
   console.log(
     chalk.green(
       `User ${chalk.bold(userData.username)} successfully registered\n`
     )
   );
-  res.send("OK");
+  return res.status(201).send("OK");
 });
 
 routes.post("/tweets", (req, res) => {
-  const tweet = { ...req.body, avatar: userData.avatar };
-  tweets.push(tweet);
+  const username = req.get("user");
+  const { tweet } = req.body;
+
+  if (!username || !tweet) {
+    console.log(chalk.red.bold("Please fill all the blanks\n"));
+    return res.status(400).send("Todos os campos são obrigatórios");
+  }
+
+  const tweetData = { username, tweet, avatar: userData.avatar };
+  tweets.push(tweetData);
+
   console.log(chalk.green("Tweet sent!\n"));
-  res.send("OK");
+  return res.status(201).send("OK");
 });
 
 routes.get("/tweets", (_req, res) => {
   const lastTenTweets = tweets.slice(tweets.length - 10, tweets.length);
-  res.send(lastTenTweets.reverse());
+  return res.send(lastTenTweets.reverse());
+});
+
+routes.get("/tweets/:username", (req, res) => {
+  const { username } = req.params;
+  res.send(username);
 });
