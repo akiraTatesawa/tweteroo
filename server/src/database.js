@@ -60,4 +60,76 @@ export const tweets = [
       "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
     tweet: "Tweet 10",
   },
+  {
+    username: "bob esponja calça quadrada",
+    avatar:
+      "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
+    tweet: "Tweet 11",
+  },
+  {
+    username: "bob esponja calça quadrada",
+    avatar:
+      "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
+    tweet: "Tweet 12",
+  },
+  {
+    username: "Naruto",
+    avatar:
+      "https://i.pinimg.com/originals/85/1b/ca/851bca4e7a0860ffaee2f647ee04b852.jpg",
+    tweet: "Tweet 13",
+  },
+  {
+    username: "sasuke uchiha",
+    avatar:
+      "https://i.pinimg.com/originals/8a/ab/a8/8aaba8fe5611ab66cca05f2d94c2932b.jpg",
+    tweet: "Tweet 14",
+  },
+  {
+    username: "bob esponja calça quadrada",
+    avatar:
+      "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
+    tweet: "Tweet 15",
+  },
+  {
+    username: "Naruto",
+    avatar:
+      "https://i.pinimg.com/originals/85/1b/ca/851bca4e7a0860ffaee2f647ee04b852.jpg",
+    tweet: "Tweet 16",
+  },
+  {
+    username: "sasuke uchiha",
+    avatar:
+      "https://i.pinimg.com/originals/8a/ab/a8/8aaba8fe5611ab66cca05f2d94c2932b.jpg",
+    tweet: "Tweet 17",
+  },
+  {
+    username: "bob esponja calça quadrada",
+    avatar:
+      "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
+    tweet: "Tweet 18",
+  },
+  {
+    username: "Naruto",
+    avatar:
+      "https://i.pinimg.com/originals/85/1b/ca/851bca4e7a0860ffaee2f647ee04b852.jpg",
+    tweet: "Tweet 19",
+  },
+  {
+    username: "sasuke uchiha",
+    avatar:
+      "https://i.pinimg.com/originals/8a/ab/a8/8aaba8fe5611ab66cca05f2d94c2932b.jpg",
+    tweet: "Tweet 20",
+  },
+  {
+    username: "bob esponja calça quadrada",
+    avatar:
+      "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
+    tweet: "Tweet 21",
+  },
+  {
+    username: "bob esponja calça quadrada",
+    avatar:
+      "https://img.elo7.com.br/product/zoom/3222EB9/bob-esponja-e-patrick-em-camadas-arquivo-de-corte-bob-esponja.jpg",
+    tweet: "Tweet 22",
+  },
 ];

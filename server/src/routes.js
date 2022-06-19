@@ -45,9 +45,26 @@ routes.post("/tweets", (req, res) => {
   return res.status(201).send("OK");
 });
 
-routes.get("/tweets", (_req, res) => {
-  const lastTenTweets = tweets.slice(tweets.length - 10, tweets.length);
-  return res.send(lastTenTweets.reverse());
+routes.get("/tweets", (req, res) => {
+  const page = parseInt(req.query.page, 10);
+  const limitTweetsPerPage = 10;
+
+  if (!page || page < 1) {
+    return res.status(400).send("Informe uma página válida!");
+  }
+
+  const tweetsStartPoint =
+    tweets.length - limitTweetsPerPage * page < 0
+      ? 0
+      : tweets.length - limitTweetsPerPage * page;
+
+  const tweetsEndPoint =
+    tweets.length - (page - 1) * limitTweetsPerPage < 0
+      ? 0
+      : tweets.length - (page - 1) * limitTweetsPerPage;
+
+  console.log(tweetsStartPoint, tweetsEndPoint);
+  return res.send(tweets.slice(tweetsStartPoint, tweetsEndPoint).reverse());
 });
 
 routes.get("/tweets/:username", (req, res) => {
@@ -55,5 +72,5 @@ routes.get("/tweets/:username", (req, res) => {
 
   const userTweets = tweets.filter(({ username: user }) => username === user);
 
-  res.send(userTweets);
+  res.send(userTweets.reverse());
 });
