@@ -26,6 +26,7 @@ routes.post("/sign-up", (req, res) => {
       `User ${chalk.bold(userData.username)} successfully registered\n`
     )
   );
+
   return res.status(201).send("OK");
 });
 
@@ -42,28 +43,24 @@ routes.post("/tweets", (req, res) => {
   tweets.push(tweetData);
 
   console.log(chalk.green("Tweet sent!\n"));
+
   return res.status(201).send("OK");
 });
 
 routes.get("/tweets", (req, res) => {
   const page = parseInt(req.query.page, 10);
+
   const limitTweetsPerPage = 10;
+  const initialStartPoint = tweets.length - limitTweetsPerPage * page;
+  const initialEndPoint = tweets.length - (page - 1) * limitTweetsPerPage;
 
   if (!page || page < 1) {
     return res.status(400).send("Informe uma página válida!");
   }
 
-  const tweetsStartPoint =
-    tweets.length - limitTweetsPerPage * page < 0
-      ? 0
-      : tweets.length - limitTweetsPerPage * page;
+  const tweetsStartPoint = initialStartPoint < 0 ? 0 : initialStartPoint;
+  const tweetsEndPoint = initialEndPoint < 0 ? 0 : initialEndPoint;
 
-  const tweetsEndPoint =
-    tweets.length - (page - 1) * limitTweetsPerPage < 0
-      ? 0
-      : tweets.length - (page - 1) * limitTweetsPerPage;
-
-  console.log(tweetsStartPoint, tweetsEndPoint);
   return res.send(tweets.slice(tweetsStartPoint, tweetsEndPoint).reverse());
 });
 
