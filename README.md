@@ -6,12 +6,8 @@
 * [Status](#status)
 * [Running the project](#running-the-project)
 
-<br/>
-
 ## Project Description
 My first back-end project is the implementation of Tweetero API, a Twitter clone, using Node and Express.
-
-<br/>
 
 ## Technologies
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -22,12 +18,8 @@ My first back-end project is the implementation of Tweetero API, a Twitter clone
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-<br/>
-
 ## Status
 ![status-finished](https://user-images.githubusercontent.com/97575616/152926720-d042178b-24c0-4d6b-94fb-0ccbd3c082cc.svg)
-
-<br/>
 
 ## Running the project
 1. Clone the repository:
